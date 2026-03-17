@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "serotyperextras"
+version = "0.1.0"
+description = "Extra Python utilities for serotyping"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "biopython",
+  "numba",
+]
+
+[project.scripts]
+annotate = "serotyperextras.annotate:main"
+fastaga = "serotyperextras.fastaga:main"
+
+[tool.setuptools]
+packages = ["serotyperextras"]
